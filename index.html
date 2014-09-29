@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Freezy  Free & Lazy</title>
+	<link rel="stylesheet" href="css/shCore.css"/>
+	<link rel="stylesheet" href="css/shThemeDefault.css"/>
+	<script src="js/shCore.js"></script>
+	<script src="js/brush.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
+	SyntaxHighlighter.all();</script>
+	<link rel="stylesheet" href="all.css">
+	<script src="all.js"></script>
+	<style>
+		.wrap{
+			width: 980px;
+			margin: 0 auto;
+		}
+		.modules{
+			border: 3px solid orange;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+		.red{
+			color: red;
+		}
+		.tips{
+			background-color: #F3C97B;
+			border: 1px solid orange;
+			padding: 10px;
+			margin: 20px 0;
+		}
+		.bb1{
+			border-bottom: 1px solid orange;
+		}
+		.pd20{
+			padding: 20px;
+		}
+		.w200{
+			width: 200px;
+		}
+		.code-html{
+			border: 2px solid #0B89CC;
+			margin: 6px 4px;
+		}
+		.code-js{
+			border: 2px solid #9600B6;
+			margin: 6px 4px;
+		}
+		.code-css{
+			border: 2px solid #CC320B;
+			margin: 6px 4px;
+		}
+	    .menu-link {
+	        position: fixed;
+	        display: none; /* show this only on small screens */
+	        top: 0;
+	        left: 0; /* "#menu width" */
+	        background: #1B1B1B;
+	        font-size: 12px;
+	        z-index: 10;
+	        width: 20px;
+	        height: 20px;
+	        padding: 10px;
+	    }
+
+        .menu-link:hover,
+        .menu-link:focus {
+            background: #000;
+        }
+
+        .menu-link span {
+            position: relative;
+            display: block;
+            margin-top: 0.9em;
+        }
+
+        .menu-link span,
+        .menu-link span:before,
+        .menu-link span:after {
+            background-color: #fff;
+            width: 100%;
+            height: .2em;
+        }
+
+        .menu-link span:before,
+        .menu-link span:after {
+            position: absolute;
+            top: -.55em;
+            content: " ";
+        }
+
+        .menu-link span:after {
+            top: .55em;
+        }
+        .m-s-nav.cus a{
+        	padding: 6px;
+        } 
+        .info{
+
+        }       
+
+
+	</style>
+</head>
+<body>
+<a href="#menu" id="menuLink" class="menu-link">
+    <span></span>
+</a>
+	<div class="wrap">
+		<h1>Freezy文档  我是个正儿八经的文档！</h1>
+		<div class="info">
+			<h2>基本信息</h2>
+			<p>Freezy为Free&Lazy缩写，通过搭积木的方式减少前端工作量。现有都是基本模块，复杂模块可以通过组合形成。</p>
+			<h3>以下为几点说明</h3>
+			<p>使用方法：</p>
+			<p>①引入all.js和all.css</p>
+			<p>
+				<pre class="brush: xhtml;">
+					<link rel="stylesheet" href="all.css">
+					<script src="all.js"></script>
+				</pre>
+			</p>			
+			<p>②找到需要的模块，复制html和js(原生编写，不用引入js库)</p>			
+			<p class='red'>③若需自定义样式，修改all.less文件，每个组件的关键属性1到2个用变量形式写在了最上方，例如btn的样式：</p>
+			<p>
+				<pre class="brush: css;">
+					//最上方的内容
+					/* u-btn */
+					@u_btn_main:0.8em; //btn的padding-top;
+					//下方的样式内容
+					padding: @u_btn_main 2*@u_btn_main;//main值 
+				</pre>
+			</p>
+			<p>④关于边框颜色：橘黄色边框为一个大模块；蓝色边框为html部分；紫色边框为js部分；红色边框为css部分</p>
+			<p>⑤关于less使用，工具http://koala-app.com/index-zh.html。<br>
+			过程超简单：下载→安装→把css文件夹拖进去→点击所需的less文件→选择“自动编译” “执行编译”<br>
+			对！ 就是这么简单！引入文件时 把生成的css文件引入即可。
+			</p>
+			<p>⑥项目地址：</p>			
+		</div>
+		
+		<h2>基本模块</h2>
+		<!-- 按钮模块 -->
+		<div class="modules">
+			<h2><a name='u-btn'>模块一  按钮走起</a></h2>
+			<div class="con">
+				<p>按钮用a元素</p>
+				<a href="" class="u-btn">我是一个小按钮</a>
+				<a href="" class="u-btn"><i class="iconfont">&#xe600;</i> 我是带图标的小按钮</a>
+				<p>按钮用button元素</p>
+				<button href="" class="u-btn u-btn-c">我是一个小按钮</button>
+				<button class='u-btn u-btn-c'> <i class="iconfont">&#xe600;</i> 我是带图标的小按钮</button>
+				<div class="tips">
+					示例中使用图标来自 阿里巴巴矢量图标库 http://www.iconfont.cn/   强烈推荐！
+				</div>
+			</div>
+			<div class="code-html">
+				<pre class="brush: xhtml;">
+					<a href="" class="u-btn">我是一个小按钮</a>
+					<a href="" class="u-btn"><i class="iconfont">&#xe600;</i> 我是带图标的小按钮</a>
+					<p>按钮用button元素</p>
+					<button href="" class="u-btn u-btn-c">我是一个小按钮</button>
+					<button class='u-btn u-btn-c'> <i class="iconfont">&#xe600;</i> 我是带图标的小按钮</button>
+				</pre>
+			</div>			
+		</div>
+		<!-- 导航模块 -->
+		<div class="modules">
+			<h2>模块二  各种导航走起</h2>
+			<div class="con">
+				<!-- 头部导航 -->
+				<div class='bb1'>
+					<h3><a name='m-h-nav'></a>头部导航</h3>
+					<div class="m-h-nav">
+						<ul>
+							<li><a href='#'>导航一</a></li>
+							<li><a href='#'>导航二</a></li>
+							<li><a href='#'>导航三</a></li>
+							<li><a href='#'>导航四</a></li>
+						</ul>
+						<div class="cl"></div>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class="m-h-nav">
+								<ul>
+									<li><a href='#'>导航一</a></li>
+									<li><a href='#'>导航二</a></li>
+									<li><a href='#'>导航三</a></li>
+									<li class='last'><a href='#'>导航四</a></li>
+								</ul>
+								<div class="cl"></div>
+							</div>
+						</pre>
+					</div>
+				</div>
+				<!-- 底部导航 -->
+				<div class="bb1">
+					<h3>底部导航一</h3>
+					<div class="m-f-nav pat1">
+						<ul>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+						</ul>
+						<ul>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+						</ul>
+						<ul>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+						</ul>
+						<ul>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+							<li><a href="">底部一内容</a></li>
+						</ul>
+						<div class="cl"></div>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class="m-f-nav pat1">
+								<ul>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+								</ul>
+								<ul>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+								</ul>
+								<ul>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+								</ul>
+								<ul>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+									<li><a href="">底部一内容</a></li>
+								</ul>
+								<div class="cl"></div>
+							</div>
+
+						</pre>
+					</div>
+					<h3>底部导航二</h3>
+					<div class="m-f-nav pat2">
+						<ul>
+							<li><a href="">底部二内容</a></li>
+							<li><a href="">底部二内容</a></li>
+							<li><a href="">底部二内容</a></li>
+							<li><a href="">底部二内容</a></li>
+							<li class='last'><a href="">底部二内容</a></li>
+						</ul>
+						<div class="cl"></div>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class="m-f-nav pat2">
+								<ul>
+									<li><a href="">底部二内容</a></li>
+									<li><a href="">底部二内容</a></li>
+									<li><a href="">底部二内容</a></li>
+									<li><a href="">底部二内容</a></li>
+									<li class='last'><a href="">底部二内容</a></li>
+								</ul>
+								<div class="cl"></div>
+							</div>
+						</pre>
+					</div>
+				</div>
+				<!-- 侧边导航 -->
+				<div class="bb1">
+					<h3><a name='m-s-nav'>侧边导航</a></h3>
+					<a class='u-btn' href='m-s-nav.html'>点击我 看单独导航去咯</a>
+					<div class="m-s-nav cus">
+						<h3><a href="#">Freezy</a></h3>
+						<ul>
+							<li><a href='#u-btn'>按钮</a></li>
+							<li><a href='#m-h-nav'>导航</a></li>
+							<li><a href='#m-pic_txt'>图片相关</a></li>
+							<li><a href='#m-page'>分页</a></li>
+							<li><a href='#m-table'>表格</a></li>
+							<li><a href='#m-tab'>选项卡</a></li>
+							<li><a href='#m-pop'>弹出框</a></li>
+							<li><a href='#m-ser'>搜索框</a></li>
+							<li><a href='#m-icon_btn'>图标和下载按钮</a></li>
+							<li><a href='#m-rank'>排行</a></li>
+							<li><a href='#m-slider'>轮播（截图向）</a></li>
+							<li><a href='#m-more'>'更多'模块</a></li>
+							<li><a href='#m-login'>登陆&注册框</a></li>
+						</ul>
+					</div>
+					<div class="cl"></div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class="m-s-nav">
+								<h3><a href="#">Title</a></h3>
+								<ul>
+									<li><a href="#">nav-1</a></li>
+									<li><a href="#">nav-2</a></li>
+									<li><a href="#">nav-3</a></li>
+									<li><a href="#">nav-4</a></li>
+									<li><a href="#">nav-5</a></li>
+									<li><a href="#">nav-6</a></li>
+								</ul>
+							</div>
+						</pre>
+					</div>
+					<div class="code-css">
+						<pre class="brush: css;">
+							body{
+								padding-left:200px; //自己加！！给body加上padding-left。其中200px为侧边导航栏的宽度；
+							}
+
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 带图片模块 -->
+		<div class="modules">
+			<h2><a name='m-pic_txt'></a>模块三 图片相关走起</h2>
+			<div class="con">
+				<!-- 包含图片 -->				
+				<div class="bb1">
+					<h3>样式一</h3>
+					<div class="m-pic_txt pat1">
+						<ul>
+							<li>
+								<a href="" class='icon'>
+									<img src="img.jpg" >
+								</a>
+								<div class='txt'>
+									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+								</div>
+							</li>
+							<li>
+								<a href="" class='icon'>
+									<img src="img.jpg" >
+								</a>
+								<div class='txt'>
+									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+								</div>
+							</li>
+							<li>
+								<a href="" class='icon'>
+									<img src="img.jpg" >
+								</a>
+								<div class='txt'>
+									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class="m-pic_txt">
+								<ul>
+									<li>
+										<a href="" class='icon'>
+											<img src="img.jpg" >
+										</a>
+										<div class='txt'>
+											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+										</div>
+									</li>
+									<li>
+										<a href="" class='icon'>
+											<img src="img.jpg" >
+										</a>
+										<div class='txt'>
+											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+										</div>
+									</li>
+									<li>
+										<a href="" class='icon'>
+											<img src="img.jpg" >
+										</a>
+										<div class='txt'>
+											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+										</div>
+									</li>
+								</ul>
+							</div>
+						</pre>
+					</div>
+				</div>
+				<div class='bb1'>
+					<h3>样式二</h3>
+					<div class="m-pic_txt pat2 active">
+						<a href=""><img src="images/2.jpg" alt=""></a>
+						<div class="con">
+							<p class="tit">我是个标题</p>
+							<p class="con-del">我是内容们</p>
+						</div>
+
+					</div>
+					<div class="m-pic_txt pat2">
+						<a href=""><img src="images/2.jpg" alt=""></a>
+						<div class="con">
+							<p class="tit">我是个标题</p>
+							<p class="con-del">我是内容们</p>
+						</div>
+					</div>
+					<div class="cl"></div>
+				</div>
+
+				
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class="m-pic_txt pat2 active">
+							<a href=""><img src="images/2.jpg" alt=""></a>
+							<div class="con">
+								<p class="tit">我是个标题</p>
+								<p class="con-del">我是内容们</p>
+							</div>
+
+						</div>
+						<div class="m-pic_txt pat2">
+							<a href=""><img src="images/2.jpg" alt=""></a>
+							<div class="con">
+								<p class="tit">我是个标题</p>
+								<p class="con-del">我是内容们</p>
+							</div>
+						</div>
+					</pre>
+
+				</div>
+				<div class="code-js">
+					<pre class='brush:js'>
+						var m_px2 = document.querySelectorAll('.m-pic_txt');
+						toggle_class(m_px2,0);
+
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 分页模块 -->
+		<div class="modules">
+			<h2><a name='m-page'></a>模块四 分页</h2>
+			<div class="con">
+				<div class='m-page'>
+					<ul>
+						<li class='active'><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+					</ul>
+					<input type="text" value='1'>
+					<div class="cl"></div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-page'>
+							<ul>
+								<li><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li><a href="">5</a></li>
+								<li><a href="">6</a></li>
+								<li><a href="">7</a></li>
+								<li><a href="">8</a></li>
+							</ul>
+							<input type="text" value='1'>
+							<div class="cl"></div>
+						</div>
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 表格模块 -->
+		<div class="modules">
+			<h2><a name='m-table'></a>模块五 表格</h2>
+			<div class="con">
+				<table class="m-table">
+				    <thead>
+				        <tr>
+				            <th>No.</th>
+				            <th>Year</th>
+				            <th>Month</th>
+				            <th>Date</th>
+				        </tr>
+				    </thead>
+
+				    <tbody>
+				        <tr>
+				            <td>1</td>
+				            <td>2010</td>
+				            <td>1</td>
+				            <td>1</td>
+				        </tr>
+
+				        <tr>
+				            <td>2</td>
+				            <td>2012</td>
+				            <td>1</td>
+				            <td>1</td>
+				        </tr>
+
+				        <tr>
+				            <td>3</td>
+				            <td>2014</td>
+				            <td>1</td>
+				            <td>1</td>
+				        </tr>
+				    </tbody>
+				</table>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<table class="m-table">
+						    <thead>
+						        <tr>
+						            <th>No.</th>
+						            <th>Year</th>
+						            <th>Month</th>
+						            <th>Date</th>
+						        </tr>
+						    </thead>
+
+						    <tbody>
+						        <tr>
+						            <td>1</td>
+						            <td>2010</td>
+						            <td>1</td>
+						            <td>1</td>
+						        </tr>
+
+						        <tr>
+						            <td>2</td>
+						            <td>2012</td>
+						            <td>1</td>
+						            <td>1</td>
+						        </tr>
+
+						        <tr>
+						            <td>3</td>
+						            <td>2014</td>
+						            <td>1</td>
+						            <td>1</td>
+						        </tr>
+						    </tbody>
+						</table>
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 选项卡模块 -->
+		<div class="modules">
+			<h2><a name='m-tab'></a>模块六 选项卡</h2>
+			<div class="con">
+				<div class="m-tab" id='m-tab'>
+				    <ul class='m-tab-tit'>
+				        <li class='active'><a>内容1</a></li>
+				        <li><a>内容2</a></li>
+				        <li><a>内容3</a></li>
+				        <li><a class='last'>内容4</a></li>
+				    </ul>
+				    <div class="cl"></div>
+				    <div class="m-tab-con">
+			    		<div class='active con'>我是内容君1</div>
+			    		<div class='con'>我是内容君2</div>
+			    		<div class='con'>我是内容君3</div>
+			    		<div class='con'>我是内容君4</div>
+				    </div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class="m-tab" id='m-tab'>
+						    <ul class='m-tab-tit'>
+						        <li class='active'><a>内容1</a></li>
+						        <li><a>内容2</a></li>
+						        <li><a>内容3</a></li>
+						        <li><a class='last'>内容4</a></li>
+						    </ul>
+						    <div class="cl"></div>
+						    <div class="m-tab-con">
+					    		<div class='active con'>我是内容君1</div>
+					    		<div class='con'>我是内容君2</div>
+					    		<div class='con'>我是内容君3</div>
+					    		<div class='con'>我是内容君4</div>
+						    </div>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						var m_tab = document.querySelector('#m-tab');
+						var m_tab_con = document.querySelector('.m-tab-con');
+						var m_tab_tit_li = document.querySelectorAll('.m-tab-tit li');
+						var m_tab_con_con = document.querySelectorAll('.m-tab-con .con');
+						tab(m_tab_tit_li,m_tab_con_con);
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 弹出框模块 -->
+		<div class="modules">
+			<h2><a name='m-pop'></a>模块七 弹出框 </h2>
+			<a class='u-btn' id='pop-show'>点击我出弹框</a>
+			<div class="con">
+				<div class="m-pop" id='m-pop'>
+					<div class="shadow">
+					</div>
+				    <div class="m-pop-con">
+					    <h2>标题<span id='pop-close'>×</span></h2>
+					    <div class="main">
+					        <p>内容区：我是内容区 yoyoyo</p>
+					    </div>
+					    <div class="btns">
+				            <button class="u-btn ok">确定</button>
+				            <a class="u-btn cancel" id='m-pop-cancel'>取消</a>
+					    </div>
+				    </div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class="m-pop" id='m-pop'>
+							<div class="shadow">
+							</div>
+						    <div class="m-pop-con">
+							    <h2>标题<span id='pop-close'>×</span></h2>
+							    <div class="main">
+							        <p>内容区：我是内容区 yoyoyo</p>
+							    </div>
+							    <div class="btns">
+						            <button class="u-btn ok">确定</button>
+						            <a class="u-btn cancel" id='m-pop-cancel'>取消</a>
+							    </div>
+						    </div>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						var pop_cancel = document.querySelector('#m-pop-cancel');
+						var m_pop = document.querySelector('#m-pop');
+						var pop_close = document.querySelector('#pop-close');
+						var pop_show = document.querySelector('#pop-show');
+
+						pop_cancel.onclick = function(){
+							m_pop.style.display = 'none';
+						}
+						pop_close.onclick = function(){
+							m_pop.style.display = 'none';
+						}
+						pop_show.onclick = function(){
+							m_pop.style.display = 'block';
+						}
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 搜索框 -->
+		<div class="modules">
+			<h2><a name='m-ser'></a>搜索框 </h2>
+			<div class="con">
+				<div class='m-ser'>
+					<input type="text" id="search-input" placeholder='search'>
+					<div class="m-ser-btn" onclick="searchApps()" id="enter"><i class="iconfont">&#xe601;</i>
+					</div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-ser'>
+							<input type="text" id="search-input" placeholder='search'>
+							<div class="m-ser-btn" onclick="searchApps()" id="enter"><i class="iconfont">&#xe601;</i>
+							</div>
+						</div>
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!--图标和下载按钮  -->
+		<div class="modules">
+			<h2><a name='m-icon_btn'></a>模块 图标和下载按钮</h2>
+			<div class="con">
+				<h3>按钮居中</h3>
+				<div class='m-icon_btn' id='m-icon_btn'>
+					<a href="#" class="icon">
+						<img src="images/icon.png">
+					</a>
+					<p class="tit" id='m-icon_btn-tit'>hello</p>
+					<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+				</div>
+				<div class='m-icon_btn' id='m-icon_btn'>
+					<a href="#" class="icon">
+						<img src="images/icon.png">
+					</a>
+					<p class="tit" id='m-icon_btn-tit'>hello</p>
+					<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+				</div>
+				<div class="cl"></div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-icon_btn' id='m-icon_btn'>
+							<a href="#" class="icon">
+								<img src="images/icon.png">
+							</a>
+							<p class="tit" id='m-icon_btn-tit'>hello</p>
+							<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+						</div>
+						<div class='m-icon_btn' id='m-icon_btn'>
+							<a href="#" class="icon">
+								<img src="images/icon.png">
+							</a>
+							<p class="tit" id='m-icon_btn-tit'>hello</p>
+							<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class='brush :js;'>
+						var m_icon_btn = document.querySelectorAll('.m-icon_btn');
+						toggle_class(m_icon_btn,0); //离开时同时去除active，则第二个参数写上0;
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 排行模块 -->
+		<div class="modules">
+			<h2><a name='m-rank'></a>排行模块</h2>
+			<div class="con">
+				<div class="m-rank">
+					<ul>
+						<li class='active'>
+							<span class='first'>1</span>
+							<a href="#"><img src="images/icon.png"></a>
+							<div class="r">
+								<a href="#" >GAME NAMExxxxxxxxxxxxxx</a>
+								<p>Download:2000+</p>
+								<button class="u-btn">Download</button>
+							</div>
+						</li>
+						<li >
+							<span class='second'>2</span>
+							<a href="#"><img src="images/icon.png"></a>
+							<div class="r">
+								<a href="#" >GAME NAME</a>
+								<p>Download:2000+</p>
+								<button class="u-btn">Download</button>
+							</div>
+						</li>
+						<li >
+							<span class='third'>3</span>
+							<a href="#"><img src="images/icon.png"></a>
+							<div class="r">
+								<a href="#" >GAME NAME</a>
+								<p>Download:2000+</p>
+								<button class="u-btn">Download</button>
+							</div>
+						</li>
+						<li >
+							<span>4</span>
+							<a href="#"><img src="images/icon.png"></a>
+							<div class="r">
+								<a href="#" >GAME NAME</a>
+								<p>Download:2000+</p>
+								<button class="u-btn">Download</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class="m-rank">
+							<ul>
+								<li class='active'>
+									<span class='first'>1</span>
+									<a href="#"><img src="images/icon.png"></a>
+									<div class="r">
+										<a href="#" >GAME NAMExxxxxxxxxxxxxx</a>
+										<p>Download:2000+</p>
+										<button class="u-btn">Download</button>
+									</div>
+								</li>
+								<li >
+									<span class='second'>2</span>
+									<a href="#"><img src="images/icon.png"></a>
+									<div class="r">
+										<a href="#" >GAME NAME</a>
+										<p>Download:2000+</p>
+										<button class="u-btn">Download</button>
+									</div>
+								</li>
+								<li >
+									<span class='third'>3</span>
+									<a href="#"><img src="images/icon.png"></a>
+									<div class="r">
+										<a href="#" >GAME NAME</a>
+										<p>Download:2000+</p>
+										<button class="u-btn">Download</button>
+									</div>
+								</li>
+								<li >
+									<span>4</span>
+									<a href="#"><img src="images/icon.png"></a>
+									<div class="r">
+										<a href="#" >GAME NAME</a>
+										<p>Download:2000+</p>
+										<button class="u-btn">Download</button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						var m_rank_li = document.querySelectorAll('.m-rank li');
+						toggle_class(m_rank_li);
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 轮播模块 -->
+		<div class="modules">
+			<h2><a name='m-slider'></a>轮播模块（截图向）</h2>
+			<div class="tips">
+				此效果用于app详细页的截图展示，横屏及竖屏截图都已做好适配<br>
+			</div>
+			<div class="con">
+				<div class='m-slider pat1' id='m-s-p1'>
+					<ul id='m-s-ul-p1'>
+						<li><img src="images/1.jpg"></li>
+						<li><img src="images/1.jpg"></li>
+						<li><img src="images/1.jpg"></li>
+						<li><img src="images/1.jpg"></li>
+					</ul>
+					<a class="btn left" id='s-btn-l-p1'><i class="iconfont">&#xe603;</i></a>
+					<a class="btn right" id='s-btn-r-p1'><i class="iconfont">&#xe602;</i></a>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-slider pat1' id='m-s-p1'>
+							<ul id='m-s-ul'>
+								<li><img src="images/2.jpg"></li>
+								<li><img src="images/2.jpg"></li>
+								<li><img src="images/2.jpg"></li>
+								<li><img src="images/2.jpg"></li>
+							</ul>
+							<a class="btn left" id='s-btn-l'><i class="iconfont">&#xe603;</i></a>
+							<a class="btn right" id='s-btn-r'><i class="iconfont">&#xe602;</i></a>
+						</div>
+
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						slider_app(280,400); //第一个参数为横屏时图片宽度 第二个参数为竖屏时图片宽度
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- “更多”模块 -->
+		<div class="modules">
+			<h2><a name='m-more'></a>“更多”模块</h2>
+			<div class="con">
+				<div class='m-more' id='m-more'>
+					<p class='txt'>
+						我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君
+					</p>
+					<div class="btns">
+						<span class="btn more">More</span>
+						<span class="btn less" style="display: none;">Less</span>
+					</div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-more' id='m-more'>
+							<p class='txt'> //在css中将 .txt的高度换成需要的高度
+								我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君
+							</p>
+							<div class="btns">
+								<span class="btn more">More</span>
+								<span class="btn less" style="display: none;">Less</span>
+							</div>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						more(36);//原始.txt的高度
+					</pre>
+				</div>
+			</div>
+		</div>
+		<!-- 登陆框及注册框 -->
+		<div class="modules">
+			<h2><a name='m-login'></a>登陆模块</h2>
+			<div class="con">
+				<h3>登陆模块</h3>
+				<div class="bb1">
+					<div class='m-login'>
+						<h1>登陆框</h1>
+						<form action="">
+						    <p><input type="email" name="email" class="login-input" placeholder="邮箱地址" autofocus></p>
+						    <p><input type="password" name="password" class="login-input" placeholder="密码"></p>
+
+						    <p class='fl'>
+						    	<input type="checkbox" name='remberMe' class='vm'>
+						    	<label for="remberMe">记住我</label>
+						    </p>
+						    <p class='fr'>
+						    	<a href="#">忘记密码?</a>
+						    </p>
+						    <button class='u-btn'>登陆</button>
+						    <p class='fr'>
+						    	<a href="#">立即注册</a>
+						    </p>
+						</form>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class='m-login'>
+								<h1>登陆框</h1>
+								<form action="">
+								    <p><input type="email" name="email" class="login-input" placeholder="邮箱地址" autofocus></p>
+								    <p><input type="password" name="password" class="login-input" placeholder="密码"></p>
+
+								    <p class='fl'>
+								    	<input type="checkbox" name='remberMe' class='vm'>
+								    	<label for="remberMe">记住我</label>
+								    </p>
+								    <p class='fr'>
+								    	<a href="#">忘记密码?</a>
+								    </p>
+								    <button class='u-btn'>登陆</button>
+								    <p class='fr'>
+								    	<a href="#">立即注册</a>
+								    </p>
+								</form>
+							</div>
+						</pre>
+					</div>
+				</div>
+				<h3>注册模块</h3>
+				<div class="bb1">
+					<div class='m-login sign'>
+						<h1>注册框</h1>
+						<form action="">
+						    <p class='tal'>
+						    	<label for="email" class=''>请输入邮箱</label>
+						    	<input type="email" name="email" class="login-input " placeholder="邮箱地址" autofocus>
+						    </p>
+						    <p class='tal'>
+						    	<label for="password" class=''>请输入密码</label>
+						    	<input type="password" name="password" class="login-input " placeholder="密码">
+
+						    </p>
+
+						    <p class='fl'>
+						    	<input type="checkbox" name='accept' class='vm'>
+						    	<label for="accept">我已经阅读并接受</label><a href="#" class='a-ori'>用户须知</a>
+						    </p>
+						    <button class='u-btn'>注册</button>
+						</form>
+					</div>
+					<div class="code-html">
+						<pre class="brush: xml;">
+							<div class='m-login sign'>
+								<h1>注册框</h1>
+								<form action="">
+								    <p class='tal'>
+								    	<label for="email" class=''>请输入邮箱</label>
+								    	<input type="email" name="email" class="login-input " placeholder="邮箱地址" autofocus>
+								    </p>
+								    <p class='tal'>
+								    	<label for="password" class=''>请输入密码</label>
+								    	<input type="password" name="password" class="login-input " placeholder="密码">
+
+								    </p>
+
+								    <p class='fl'>
+								    	<input type="checkbox" name='accept' class='vm'>
+								    	<label for="accept">我已经阅读并接受</label><a href="#" class='a-ori'>用户须知</a>
+								    </p>
+								    <button class='u-btn'>注册</button>
+								</form>
+							</div>
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function(){
+			//弹出框js开始
+			var pop_cancel = document.querySelector('#m-pop-cancel');
+			var m_pop = document.querySelector('#m-pop');
+			var pop_close = document.querySelector('#pop-close');
+			var pop_show = document.querySelector('#pop-show');
+
+			pop_cancel.onclick = function(){
+				m_pop.style.display = 'none';
+			}
+			pop_close.onclick = function(){
+				m_pop.style.display = 'none';
+			}
+			pop_show.onclick = function(){
+				m_pop.style.display = 'block';
+			}
+			//弹出框js结束
+
+			//tab  js开始
+			var m_tab = document.querySelector('#m-tab');
+			var m_tab_con = document.querySelector('.m-tab-con');
+			var m_tab_tit_li = document.querySelectorAll('.m-tab-tit li');
+			var m_tab_con_con = document.querySelectorAll('.m-tab-con .con');
+			tab(m_tab_tit_li,m_tab_con_con);
+			//tab  js结束
+
+			//icon&btn开始
+			var m_icon_btn = document.querySelectorAll('.m-icon_btn');
+			toggle_class(m_icon_btn,0); //离开时同时去除active，则第二个参数写上0;
+			//icon&btn结束
+
+			//排行开始
+			var m_rank_li = document.querySelectorAll('.m-rank li');
+			toggle_class(m_rank_li);
+			//排行结束
+
+			//slider开始
+			slider_app(280,400); //第一个参数为横屏时图片宽度 第二个参数为竖屏时图片宽度
+			//slider结束
+			//"更多"内容
+			more(36);
+
+
+
+			//显示及隐藏导航
+			window.onresize = function(){
+				var win_w = document.body.clientWidth;
+				var menu_link = document.querySelector('#menuLink');
+				var nav_cus = document.querySelector('.m-s-nav.cus');
+				var menu_i = 0;
+				if(win_w < 1200){
+					menu_link.style.display = 'block';
+					nav_cus.style.display = 'none';
+
+				}else{
+					menu_link.style.display = 'none';
+					nav_cus.style.display = 'block';
+				}
+				menu_link.onclick = function(){
+					menu_i++;
+					if(menu_i%2 == 0){
+						nav_cus.style.display = 'none';
+					}else{
+						nav_cus.style.display = 'block';
+					}
+				}					
+			}
+
+			//module-pic_txt patten2
+			var m_px2 = document.querySelectorAll('.m-pic_txt');
+			toggle_class(m_px2,0);
+
+		}
+	</script>
+</body>
+</html>
