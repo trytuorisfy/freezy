@@ -35,12 +35,33 @@
 		}
 		.bb1{
 			border-bottom: 1px solid orange;
+
+		}
+		.bgrey{
+			border: 1px solid grey;
+			padding: 10px;
 		}
 		.pd20{
 			padding: 20px;
 		}
 		.w200{
 			width: 200px;
+		}
+		.w400{
+			width: 400px;
+		}
+		.h100{
+			height: 100px;
+		}
+		.tdn_h{
+			color: #000;
+			text-decoration: none;
+		}
+		.tdn_h:hover{
+			text-decoration: underline;
+		}		
+		.ovh{
+			overflow: hidden;
 		}
 		.code-html{
 			border: 2px solid #0B89CC;
@@ -99,9 +120,7 @@
         .m-s-nav.cus a{
         	padding: 6px;
         } 
-        .info{
-
-        }       
+		     
 
 
 	</style>
@@ -125,22 +144,22 @@
 				</pre>
 			</p>			
 			<p>②找到需要的模块，复制html和js(原生编写，不用引入js库)</p>			
-			<p class='red'>③若需自定义样式，修改all.less文件，每个组件的关键属性1到2个用变量形式写在了最上方，例如btn的样式：</p>
+			<p class='red'>③若需自定义样式，修改all.less文件，每个组件的1到2个关键属性用变量形式定义在了all.less文件的起始部分，例如btn的样式：</p>
 			<p>
 				<pre class="brush: css;">
-					//最上方的内容
+					//定义关键属性的变量
 					/* u-btn */
 					@u_btn_main:0.8em; //btn的padding-top;
-					//下方的样式内容
+					//已定义好的变量使用
 					padding: @u_btn_main 2*@u_btn_main;//main值 
 				</pre>
 			</p>
 			<p>④关于边框颜色：橘黄色边框为一个大模块；蓝色边框为html部分；紫色边框为js部分；红色边框为css部分</p>
 			<p>⑤关于less使用，工具http://koala-app.com/index-zh.html。<br>
-			过程超简单：下载→安装→把css文件夹拖进去→点击所需的less文件→选择“自动编译” “执行编译”<br>
+			过程超简单：下载→安装→把css文件夹拖进去→点击所需的less文件→选择“自动编译” “执行编译”。<br>
 			对！ 就是这么简单！引入文件时 把生成的css文件引入即可。
 			</p>
-			<p>⑥项目地址：https://github.com/trytuorisfy/freezy</p>			
+			<p>⑥项目地址：<a href="https://github.com/trytuorisfy/freezy" target="_blank">https://github.com/trytuorisfy/freezy</a></p>			
 		</div>
 		
 		<h2>基本模块</h2>
@@ -155,7 +174,8 @@
 				<button href="" class="u-btn u-btn-c">我是一个小按钮</button>
 				<button class='u-btn u-btn-c'> <i class="iconfont">&#xe600;</i> 我是带图标的小按钮</button>
 				<div class="tips">
-					示例中使用图标来自 阿里巴巴矢量图标库 http://www.iconfont.cn/   强烈推荐！
+					示例中使用图标来自 阿里巴巴矢量图标库 http://www.iconfont.cn/   强烈推荐！<br>
+					html代码中的长方形中间有个问号，实际是类似于"&"+"#"+"xe604;" 这种形式的字符，正式使用时复制进去即可。详见阿里巴巴矢量图标库使用教程。
 				</div>
 			</div>
 			<div class="code-html">
@@ -353,63 +373,46 @@
 					<div class="m-pic_txt pat1">
 						<ul>
 							<li>
-								<a href="" class='icon'>
-									<img src="img.jpg" >
-								</a>
-								<div class='txt'>
-									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+								<div>
+									<a href="" class='icon'>
+										<img src="img.jpg" >
+									</a>
 								</div>
+								<div>
+									<div class="tit">我是右边的标题兄</div>
+									<div class="stars"><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont">&#xe604;</i></div>
+									<div class='txt'>
+										我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+									</div>
+								</div>	
 							</li>
-							<li>
-								<a href="" class='icon'>
-									<img src="img.jpg" >
-								</a>
-								<div class='txt'>
-									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
-								</div>
-							</li>
-							<li>
-								<a href="" class='icon'>
-									<img src="img.jpg" >
-								</a>
-								<div class='txt'>
-									我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
-								</div>
-							</li>
-						</ul>
+						</ul>											
 					</div>
 					<div class="code-html">
 						<pre class="brush: xml;">
-							<div class="m-pic_txt">
+							<div class="m-pic_txt pat1">
 								<ul>
 									<li>
-										<a href="" class='icon'>
-											<img src="img.jpg" >
-										</a>
-										<div class='txt'>
-											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+										<div>
+											<a href="" class='icon'>
+												<img src="img.jpg" >
+											</a>
 										</div>
+										<div>
+											<div class="tit">我是右边的标题兄</div>
+											<div class="stars"><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont bright">&#xe604;</i><i class="iconfont">&#xe604;</i></div>
+											<!-- 需要亮起的星星加上"bright"这个class -->
+											<div class='txt'>
+												我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
+											</div>
+										</div>	
 									</li>
-									<li>
-										<a href="" class='icon'>
-											<img src="img.jpg" >
-										</a>
-										<div class='txt'>
-											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
-										</div>
-									</li>
-									<li>
-										<a href="" class='icon'>
-											<img src="img.jpg" >
-										</a>
-										<div class='txt'>
-											我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄我是文字兄
-										</div>
-									</li>
-								</ul>
-							</div>
+								</ul>											
+							</div>						
 						</pre>
 					</div>
+
+
 				</div>
 				<div class='bb1'>
 					<h3>样式二</h3>
@@ -430,7 +433,6 @@
 					</div>
 					<div class="cl"></div>
 				</div>
-
 				
 				<div class="code-html">
 					<pre class="brush: xml;">
@@ -698,7 +700,7 @@
 							</div>
 						</div>
 					</pre>
-				</div>
+				</div>				
 			</div>
 		</div>
 		<!--图标和下载按钮  -->

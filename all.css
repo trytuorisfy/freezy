@@ -1,4 +1,4 @@
-/* 自定义区开始 */
+/* 定义变量开始 */
 /* 主要尺寸去 组件其他尺寸根据此主尺寸按比例计算  若需跳转 请调整比例！！ */
 /* u-btn */
 /* m-h-nav */
@@ -18,7 +18,8 @@
 /* m-slider */
 /* m-more */
 /* m-login  login */
-/* 自定义区结束 */
+/* 定义变量结束 */
+/* 正文css开始 */
 body {
   margin: 0;
 }
@@ -86,8 +87,8 @@ p {
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('http://at.alicdn.com/t/font_1411623601_0499864.eot');
-  src: url('http://at.alicdn.com/t/font_1411623601_0499864.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1411623601_0499864.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1411623601_0499864.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1411623601_0499864.svg#iconfont') format('svg');
+  src: url('http://at.alicdn.com/t/font_1412731816_7261977.eot');
+  src: url('http://at.alicdn.com/t/font_1412731816_7261977.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1412731816_7261977.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1412731816_7261977.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1412731816_7261977.svg#iconfont') format('svg');
   
   /* IE9*/
   /* iOS 4.1- */
@@ -190,6 +191,15 @@ p {
 }
 .m-pic_txt.pat1 ul li .icon img {
   width: 100%;
+}
+.m-pic_txt.pat1 ul li .stars {
+  color: #949494;
+}
+.m-pic_txt.pat1 ul li .stars .bright {
+  color: orange;
+}
+.m-pic_txt.pat1 .tit {
+  font-weight: bold;
 }
 .m-pic_txt.pat2 {
   position: relative;
@@ -642,3 +652,4 @@ p {
 .m-login.sign .login-input {
   margin-top: 6px;
 }
+/* 正文css结束 */

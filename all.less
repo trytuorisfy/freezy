@@ -1,4 +1,4 @@
-/* 自定义区开始 */
+/* 定义变量开始 */
 @bg_main:#54aede; //主色调 见页面中的按钮色
 @bg_main_h:#399dd8;//主色调 hover时的颜色
 /* 主要尺寸去 组件其他尺寸根据此主尺寸按比例计算  若需跳转 请调整比例！！ */
@@ -41,9 +41,9 @@
 @m_more_main:36px;//需要露出的文字框的高度
 /* m-login  login */
 @m_login_log:38px;//input高度
-/* 自定义区结束 */
+/* 定义变量结束 */
 
-
+/* 正文css开始 */
 //一些需要的reset
 body{
 	margin: 0;
@@ -119,11 +119,11 @@ p{
 // 阿里巴巴矢量库用法 http://www.iconfont.cn/
 @font-face {
   font-family: 'iconfont';
-  src: url('http://at.alicdn.com/t/font_1411623601_0499864.eot'); /* IE9*/
-  src: url('http://at.alicdn.com/t/font_1411623601_0499864.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('http://at.alicdn.com/t/font_1411623601_0499864.woff') format('woff'), /* chrome、firefox */
-  url('http://at.alicdn.com/t/font_1411623601_0499864.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('http://at.alicdn.com/t/font_1411623601_0499864.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('http://at.alicdn.com/t/font_1412731816_7261977.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1412731816_7261977.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1412731816_7261977.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1412731816_7261977.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1412731816_7261977.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 .iconfont{font-family:"iconfont";font-size:16px;font-style:normal;}
 //module-header-nav
@@ -246,7 +246,16 @@ p{
 						width: 100%;
 					}
 				}
+				.stars{
+					color:#949494;
+					.bright{
+						color: orange;
+					}
+				}
 			}
+		}
+		.tit{
+			font-weight: bold;
 		}
 	}
 	&.pat2{
@@ -292,7 +301,6 @@ p{
 
 
 	}
-
 }
 //module-page
 .m-page{
@@ -747,5 +755,5 @@ p{
 		}
 	}
 }
-
+/* 正文css结束 */
 
