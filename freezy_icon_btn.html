@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Freezy  Free & Lazy</title>
+	<link rel="stylesheet" href="css/shCore.css"/>
+	<link rel="stylesheet" href="css/shThemeDefault.css"/>
+	<script src="js/shCore.js"></script>
+	<script src="js/brush.js"></script>
+	<script src="js/shBrushCss.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script src="js/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
+	SyntaxHighlighter.all();</script>
+	<link rel="stylesheet" href="freezy.css">
+	<link rel="stylesheet" href="css/cus.css">
+	<script src="freezy.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<h1>Freezy文档  我是个正儿八经的文档！</h1>
+		<div class="m-s-nav cus">
+			<h3><a href="index.html">Freezy</a></h3>
+			<ul>
+				<li><a href="freezy_btn.html">按钮</a></li>
+				<li><a href="freezy_h_nav.html">导航</a></li>
+				<li><a href="freezy_pic_txt.html">图片相关</a></li>
+				<li><a href="freezy_page.html">分页</a></li>
+				<li><a href="freezy_table.html">表格</a></li>
+				<li><a href="freezy_tab.html">选项卡</a></li>
+				<li><a href="freezy_pop.html">弹出框</a></li>
+				<li><a href="freezy_ser.html">搜索框</a></li>
+				<li><a href="freezy_icon_btn.html">图标和下载按钮</a></li>
+				<li><a href="freezy_rank.html">排行</a></li>
+				<li><a href="freezy_slider.html">轮播（截图向）</a></li>
+				<li><a href="freezy_more.html">'更多'模块</a></li>
+				<li><a href="freezy_login.html">登陆&amp;注册框</a></li>
+			</ul>
+		</div>
+		<div class="modules">
+			<h2><a name='m-icon_btn'></a>模块 图标和下载按钮</h2>
+			<div class="con">
+				<h3>按钮居中</h3>
+				<div class='m-icon_btn' id='m-icon_btn'>
+					<a href="#" class="icon">
+						<img src="images/icon.png">
+					</a>
+					<p class="tit" id='m-icon_btn-tit'>hello</p>
+					<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+				</div>
+				<div class='m-icon_btn' id='m-icon_btn'>
+					<a href="#" class="icon">
+						<img src="images/icon.png">
+					</a>
+					<p class="tit" id='m-icon_btn-tit'>hello</p>
+					<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+				</div>
+				<div class="cl"></div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class='m-icon_btn' id='m-icon_btn'>
+							<a href="#" class="icon">
+								<img src="images/icon.png">
+							</a>
+							<p class="tit" id='m-icon_btn-tit'>hello</p>
+							<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+						</div>
+						<div class='m-icon_btn' id='m-icon_btn'>
+							<a href="#" class="icon">
+								<img src="images/icon.png">
+							</a>
+							<p class="tit" id='m-icon_btn-tit'>hello</p>
+							<a class="u-btn" id='m-icon_btn-btn'>Download</a>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class='brush :js;'>
+						var m_icon_btn = document.querySelectorAll('.m-icon_btn');
+						toggle_class(m_icon_btn,0); //离开时同时去除active，则第二个参数写上0;
+					</pre>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<script src="js/cus.js"></script>
+</body>
+</html>
