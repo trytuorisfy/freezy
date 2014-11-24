@@ -33,45 +33,28 @@
         },
         "js/brush/brush.js": {
             "uri": "/js/brush/brush.js",
-            "type": "js",
-            "pkg": "p0"
+            "type": "js"
         },
         "js/brush/shBrushCss.js": {
             "uri": "/js/brush/shBrushCss.js",
-            "type": "js",
-            "pkg": "p0"
+            "type": "js"
         },
         "js/brush/shBrushJScript.js": {
             "uri": "/js/brush/shBrushJScript.js",
-            "type": "js",
-            "pkg": "p0"
+            "type": "js"
         },
         "js/brush/shBrushXml.js": {
             "uri": "/js/brush/shBrushXml.js",
-            "type": "js",
-            "pkg": "p0"
+            "type": "js"
         },
         "js/brush/shCore.js": {
             "uri": "/js/brush/shCore.js",
-            "type": "js",
-            "pkg": "p0"
+            "type": "js"
         },
         "js/cus.js": {
             "uri": "/js/cus.js",
             "type": "js"
         }
     },
-    "pkg": {
-        "p0": {
-            "uri": "/allbrush.js",
-            "type": "js",
-            "has": [
-                "js/brush/brush.js",
-                "js/brush/shBrushCss.js",
-                "js/brush/shBrushJScript.js",
-                "js/brush/shBrushXml.js",
-                "js/brush/shCore.js"
-            ]
-        }
-    }
+    "pkg": {}
 }

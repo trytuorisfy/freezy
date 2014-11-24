@@ -3,15 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Freezy  Free & Lazy</title>
-	<link type="text/css" rel="stylesheet" href="/css/shCore.css">
-<link type="text/css" rel="stylesheet" href="/css/shThemeDefault.css">
-<script src="js/shCore.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/allbrush.js"></script>
-<script>SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
+	<link rel="stylesheet" href="/css/shCore.css"/>
+	<link rel="stylesheet" href="/css/shThemeDefault.css"/>
+	<script src="js/shCore.js"></script>
+	<script src="/js/brush/brush.js"></script>
+	<script src="/js/brush/shBrushCss.js"></script>
+	<script src="/js/brush/shBrushJScript.js"></script>
+	<script src="/js/brush/shBrushXml.js"></script>
+	<script>SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
 	SyntaxHighlighter.all();</script>
-	<link type="text/css" rel="stylesheet" href="/freezy.css">
-<link type="text/css" rel="stylesheet" href="/css/cus.css">
-<script type="text/javascript" charset="utf-8" src="/freezy.js"></script>
+	<link rel="stylesheet" href="/freezy.css">
+	<link rel="stylesheet" href="/css/cus.css">
+	<script src="/freezy.js"></script>
 </head>
 <body class='freezy'>
 	<div class="fixheader">
@@ -57,7 +60,9 @@
 			<p>①引入freezy.js和freezy.css</p>
 			<p>
 				<pre class="brush: xhtml;">
-					<!--RESOURCE_freezy.less_PLACEHOLDER--><!--RESOURCE_freezy.js_PLACEHOLDER--></pre>
+					<link rel="stylesheet" href="/freezy.css">
+					<script src="/freezy.js"></script>
+				</pre>
 			</p>			
 			<p>
 				②<span>以防class重名，请在body上加上"freezy"的class</span>
@@ -81,4 +86,6 @@
 			<p>⑦项目地址：<a href="https://github.com/trytuorisfy/freezy" target="_blank">https://github.com/trytuorisfy/freezy</a></p>			
 		</div>
 	</div>
-	<script type="text/javascript" charset="utf-8" src="/js/cus.js"></script>
+	<script src="/js/cus.js"></script>
+</body>
+</html>				
