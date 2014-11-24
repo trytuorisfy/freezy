@@ -1,0 +1,77 @@
+{
+    "res": {
+        "css/cus.css": {
+            "uri": "/css/cus.css",
+            "type": "css"
+        },
+        "css/cus.less": {
+            "uri": "/css/cus.css",
+            "type": "css"
+        },
+        "css/shCore.css": {
+            "uri": "/css/shCore.css",
+            "type": "css"
+        },
+        "css/shThemeDefault.css": {
+            "uri": "/css/shThemeDefault.css",
+            "type": "css"
+        },
+        "freezy.css": {
+            "uri": "/freezy.css",
+            "type": "css"
+        },
+        "freezy.js": {
+            "uri": "/freezy.js",
+            "type": "js",
+            "deps": [
+                "freezy.css"
+            ]
+        },
+        "freezy.less": {
+            "uri": "/freezy.css",
+            "type": "css"
+        },
+        "js/brush/brush.js": {
+            "uri": "/js/brush/brush.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/brush/shBrushCss.js": {
+            "uri": "/js/brush/shBrushCss.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/brush/shBrushJScript.js": {
+            "uri": "/js/brush/shBrushJScript.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/brush/shBrushXml.js": {
+            "uri": "/js/brush/shBrushXml.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/brush/shCore.js": {
+            "uri": "/js/brush/shCore.js",
+            "type": "js",
+            "pkg": "p0"
+        },
+        "js/cus.js": {
+            "uri": "/js/cus.js",
+            "type": "js"
+        }
+    },
+    "pkg": {
+        "p0": {
+            "uri": "/allbrush.js",
+            "type": "js",
+            "has": [
+                "js/brush/brush.js",
+                "js/brush/shBrushCss.js",
+                "js/brush/shBrushJScript.js",
+                "js/brush/shBrushXml.js",
+                "js/brush/shCore.js"
+            ]
+        }
+    }
+}

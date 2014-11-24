@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Freezy  Free & Lazy</title>
+	<link type="text/css" rel="stylesheet" href="/css/shCore.css">
+<link type="text/css" rel="stylesheet" href="/css/shThemeDefault.css">
+<script src="js/shCore.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/allbrush.js"></script>
+<script>SyntaxHighlighter.config.clipboardSwf = 'js/clipboard.swf';
+	SyntaxHighlighter.all();</script>
+	<link type="text/css" rel="stylesheet" href="/freezy.css">
+<link type="text/css" rel="stylesheet" href="/css/cus.css">
+<script type="text/javascript" charset="utf-8" src="/freezy.js"></script>
+</head>
+<body class='freezy'>
+	<div class="fixheader">
+		<span class='logo-tit'><a href="index.html">Freezy</a></span>
+		<div class="m-h-nav">
+
+			<ul>
+				<!-- <li><a href="index.html">首页</a></li> -->
+				<li><a href="index.html">文档</a></li>
+				<!-- <li><a href="#">教程示例</a></li> -->
+				<!-- <li><a href="#">文案提交</a></li> -->
+				<!-- <li class="last"><a href="#">关于我们</a></li> -->
+			</ul>
+			<div class="cl"></div>
+		</div>
+
+		
+	</div>
+	<div class="wrap">
+		<!-- <h1>Freezy文档  我是个正儿八经的文档！</h1> -->
+		<div class="m-s-nav cus">
+			<ul>
+				<li><a href="freezy_btn.html">按钮</a></li>
+				<li><a href="freezy_h_nav.html">导航</a></li>
+				<li><a href="freezy_pic_txt.html">图片相关</a></li>
+				<li><a href="freezy_page.html">分页</a></li>
+				<li><a href="freezy_table.html">表格</a></li>
+				<li><a href="freezy_tab.html">选项卡</a></li>
+				<li><a href="freezy_pop.html">弹出框</a></li>
+				<li><a href="freezy_ser.html">搜索框</a></li>
+				<li><a href="freezy_icon_btn.html">图标和下载按钮</a></li>
+				<li><a href="freezy_rank.html">排行</a></li>
+				<li><a href="freezy_slider.html">轮播（截图向）</a></li>
+				<li><a href="freezy_more.html">'更多'模块</a></li>
+				<li><a href="freezy_login.html">登陆&amp;注册框</a></li>
+			</ul>
+		</div>
+		<div class="modules">
+			<h2><a name='u-btn'>模块一  按钮走起</a></h2>
+			<div class="con">
+				<p>按钮用a元素</p>
+				<a href="" class="u-btn">我是一个小按钮</a>
+				<a href="" class="u-btn"><i class="iconfont">&#xe600;</i> 我是带图标的小按钮</a>
+				<p>按钮用button元素</p>
+				<button href="" class="u-btn u-btn-c">我是一个小按钮</button>
+				<button class='u-btn u-btn-c'> <i class="iconfont">&#xe600;</i> 我是带图标的小按钮</button>
+				<div class="tips">
+					示例中使用图标来自 阿里巴巴矢量图标库 http://www.iconfont.cn/   强烈推荐！<br>
+					html代码中的长方形中间有个问号，实际是类似于"&"+"#"+"xe604;" 这种形式的字符，正式使用时复制进去即可。详见阿里巴巴矢量图标库使用教程。
+				</div>
+			</div>
+			<div class="code-html">
+				<pre class="brush: xhtml;">
+					<a href="" class="u-btn">我是一个小按钮</a>
+					<a href="" class="u-btn"><i class="iconfont">&#xe600;</i> 我是带图标的小按钮</a>
+					<p>按钮用button元素</p>
+					<button href="" class="u-btn u-btn-c">我是一个小按钮</button>
+					<button class='u-btn u-btn-c'> <i class="iconfont">&#xe600;</i> 我是带图标的小按钮</button>
+				</pre>
+			</div>			
+		</div>	
+	</div>
+	<script type="text/javascript" charset="utf-8" src="/js/cus.js"></script>
+<script>
+	var side_navli = document.querySelectorAll('.m-s-nav.cus ul li');
+	addClass(side_navli[0],'active');
+</script>
+</body>
+</html>
