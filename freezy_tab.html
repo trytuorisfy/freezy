@@ -54,41 +54,61 @@
 				<li><a href="freezy_login.html">登陆&amp;注册框</a></li>
 			</ul>
 		</div>
-		<div class="info">
-			<h2>基本信息</h2>
-			<p>Freezy为Free&Lazy缩写，通过搭积木的方式减少前端工作量。现有都是基本模块，复杂模块可以通过组合形成。</p>
-			<h3>以下为几点说明</h3>
-			<p>使用方法：</p>
-			<p>①引入freezy.js和freezy.css</p>
-			<p>
-				<pre class="brush: xml;">
-					<link rel="stylesheet" href="./freezy.css">
-					<script src="./freezy.js"></script>
-				</pre>
-			</p>			
-			<p>
-				②<span>以防class重名，请在body上加上"freezy"的class</span>
-			</p>			
-			<p>③找到需要的模块，复制html和js(原生编写，不用引入js库)</p>			
-			<p class='red'>④若需自定义样式，修改freezy.less文件，每个组件的1到2个关键属性用变量形式定义在了freezy.less文件的起始部分，例如btn的样式：</p>
-			<p>
-				<pre class="brush: css;">
-					//定义关键属性的变量
-					/* u-btn */
-					@u_btn_main:0.8em; //btn的padding-top;
-					//已定义好的变量使用
-					padding: @u_btn_main 2*@u_btn_main;//main值 
-				</pre>
-			</p>
-			<p>⑤关于边框颜色：蓝色边框为html部分；紫色边框为js部分；红色边框为css部分</p>
-			<p>⑥关于less使用，工具http://koala-app.com/index-zh.html。<br>
-			过程超简单：下载→安装→把css文件夹拖进去→点击所需的less文件→选择“自动编译” “执行编译”。<br>
-			对！ 就是这么简单！引入文件时 把生成的css文件引入即可。教程使劲<a href="koala_course.html" target="_blank">戳我</a>！
-			</p>
-			<p>⑦关于阿里巴巴矢量图标使用，教程使劲<a href="icon_course.html" target="_blank">戳我</a></p>	
-			<p>⑧项目地址：<a href="https://github.com/trytuorisfy/freezy" target="_blank">https://github.com/trytuorisfy/freezy</a></p>						
-		</div>
+		<div class="modules">
+			<h2><a name='m-tab'></a>模块六 选项卡</h2>
+			<div class="con">
+				<div class="m-tab" id='m-tab'>
+				    <ul class='m-tab-tit'>
+				        <li class='active'><a>内容1</a></li>
+				        <li><a>内容2</a></li>
+				        <li><a>内容3</a></li>
+				        <li><a class='last'>内容4</a></li>
+				    </ul>
+				    <div class="cl"></div>
+				    <div class="m-tab-con">
+			    		<div class='active con'>我是内容君1</div>
+			    		<div class='con'>我是内容君2</div>
+			    		<div class='con'>我是内容君3</div>
+			    		<div class='con'>我是内容君4</div>
+				    </div>
+				</div>
+				<div class="code-html">
+					<pre class="brush: xml;">
+						<div class="m-tab" id='m-tab'>
+						    <ul class='m-tab-tit'>
+						        <li class='active'><a>内容1</a></li>
+						        <li><a>内容2</a></li>
+						        <li><a>内容3</a></li>
+						        <li><a class='last'>内容4</a></li>
+						    </ul>
+						    <div class="cl"></div>
+						    <div class="m-tab-con">
+					    		<div class='active con'>我是内容君1</div>
+					    		<div class='con'>我是内容君2</div>
+					    		<div class='con'>我是内容君3</div>
+					    		<div class='con'>我是内容君4</div>
+						    </div>
+						</div>
+					</pre>
+				</div>
+				<div class="code-js">
+					<pre class="brush: js;">
+						var m_tab = document.querySelector('#m-tab');
+						var m_tab_con = document.querySelector('.m-tab-con');
+						var m_tab_tit_li = document.querySelectorAll('.m-tab-tit li');
+						var m_tab_con_con = document.querySelectorAll('.m-tab-con .con');
+						tab(m_tab_tit_li,m_tab_con_con);
+					</pre>
+				</div>
+			</div>
+		</div>		
 	</div>
 	<script src="./js/cus.js"></script>
 </body>
-</html>				
+</html>
+<script>
+	var side_navli = document.querySelectorAll('.m-s-nav.cus ul li');
+	addClass(side_navli[5],'active');
+</script>
+</body>
+</html>	

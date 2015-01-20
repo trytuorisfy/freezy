@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Freezy demo2</title>
+<link rel="stylesheet" href="./freezy.css">
+<link rel="stylesheet" href="./demos/css/demo.css">
+<script src='./freezy.js'></script>
+</head>
+<body class='freezy demo2'>
+	<header>	
+		<div class="wrap">							
+			<div class="m-h-nav main">
+				<ul>
+					<li class='active'><a href="../index.html">文档</a></li>
+					<li><a href="demo1.html">示例页一</a></li>
+					<li><a href="demo2.html">示例页二</a></li>
+				</ul>
+				<div class="cl"></div>
+			</div>
+		</div>	
+	</header>
+	<div class="wrap">
+		<div class="logo-ser">
+			<div class="logo fl"><img src="./demos/images/logo3.png"></div>
+				<div class='m-ser pat1 fr'>
+					<input type="text" id="search-input" placeholder='search'>
+					<div class="m-ser-btn" id="enter"><i class="iconfont">&#xe601;</i>
+					</div>
+				</div>	
+			<div class="cl"></div>
+		</div>
+		<div class="cl"></div>
+
+		<div class="cont">
+			<div class="m-b-nav">
+				<a href="#">xxx</a>&gt;<a href="#">xxx</a>&gt;xxxx	
+			</div>			
+			<div class="m-icon_btn" id="m-icon_btn">
+				<a href="#" class="icon">
+					<img src="./demos/images/icon.png">
+				</a>
+				<a class="u-btn" id="m-icon_btn-btn">Download</a>
+			</div>
+			<div class="det-txt fl">
+				<h3>标题走起</h3>	
+				<div class="txt-con">
+					<p>内容1</p>
+					<p>内容2</p>
+					<p>内容3</p>
+					<p>内容4</p>
+				</div>		
+			</div>	
+			<div class="cl"></div>
+			<h3 class='d2-tit'>描述</h3>
+			<div class="m-more" id="m-more">
+				<p class="txt"> 
+					我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君我是文字君
+				</p>
+				<div class="btns">
+					<span class="btn more">More</span>
+					<span class="btn less" style="display: none;">Less</span>
+				</div>
+			</div>	
+			<h3 class='d2-tit'>app截图</h3>
+			<div class="m-slider pat1" id="m-s-p1">
+				<ul id="m-s-ul-p1">
+					<li><img src="./demos/images/1.jpg"></li>
+					<li><img src="./demos/images/1.jpg"></li>
+					<li><img src="./demos/images/1.jpg"></li>
+					<li><img src="./demos/images/1.jpg"></li>
+				</ul>
+				<a class="btn left" id="s-btn-l-p1"><i class="iconfont">&#xe603;</i></a>
+				<a class="btn right" id="s-btn-r-p1"><i class="iconfont">&#xe602;</i></a>
+			</div>
+			<h3 class='d2-tit'>相似</h3>
+				<div class="m-icon_btn" id="m-icon_btn">
+					<a href="#" class="icon">
+						<img src="./demos/images/icon.png">
+					</a>
+					<p class="tit" id="m-icon_btn-tit">hello</p>
+				</div>
+				<div class="m-icon_btn" id="m-icon_btn">
+					<a href="#" class="icon">
+						<img src="./demos/images/icon.png">
+					</a>
+					<p class="tit" id="m-icon_btn-tit">hello</p>
+				</div>
+
+		</div>
+		<div class="cl"></div>
+	</div>
+
+	<footer>		
+		<div class="m-f-nav pat2 wrap">
+			<ul>
+				<li><a href="">底部二内容</a></li>
+				<li><a href="">底部二内容</a></li>
+				<li><a href="">底部二内容</a></li>
+				<li><a href="">底部二内容</a></li>
+				<li class="last"><a href="">底部二内容</a></li>
+			</ul>
+			<div class="cl"></div>
+		</div>	
+	</footer>
+
+<script>
+	window.onload = function(){
+		var m_rank_li = document.querySelectorAll('.m-rank li');
+		toggle_class(m_rank_li);
+		more(36);//原始.txt的高度
+		slider_app(280,400); 
+	}
+</script>
+</body>
+</html>
