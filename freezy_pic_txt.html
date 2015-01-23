@@ -1,60 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Freezy  Free & Lazy</title>
-	<link rel="stylesheet" href="./css/shCore.css"/>
-	<link rel="stylesheet" href="./css/shThemeDefault.css"/>
-	<script src="./js/brush/shCore.js"></script>
-	<script src="./js/brush/brush.js"></script>
-	<script src="./js/brush/shBrushCss.js"></script>
-	<script src="./js/brush/shBrushJScript.js"></script>
-	<script src="./js/brush/shBrushXml.js"></script>
-	<script>SyntaxHighlighter.config.clipboardSwf = 'js/brush/clipboard.swf';
-	SyntaxHighlighter.all();</script>
-	<link rel="stylesheet" href="./src/freezy.css">
-	<link rel="stylesheet" href="./css/cus.css">
-	<script src="./src/freezy.js"></script>
-</head>
-<body class='freezy'>
-	<div class="fixheader">
-		<span class='logo-tit'><a href="index.html">Freezy</a></span>
-		<div class="m-h-nav">
-
-			<ul>
-				<!-- <li><a href="index.html">首页</a></li> -->
-				<li><a href="index.html">文档</a></li>
-				<li><a href="demos/demo1.html">示例页一</a></li>
-				<li><a href="demos/demo2.html">示例页二</a></li>
-				<!-- <li><a href="#">教程示例</a></li> -->
-				<!-- <li><a href="#">文案提交</a></li> -->
-				<!-- <li class="last"><a href="#">关于我们</a></li> -->
-			</ul>
-			<div class="cl"></div>
-		</div>
-
-		
-	</div>
-
-	<div class="wrap">
-		<!-- <h1>Freezy文档  我是个正儿八经的文档！</h1> -->
-		<div class="m-s-nav cus">
-			<ul>
-				<li><a href="freezy_btn.html">按钮</a></li>
-				<li><a href="freezy_h_nav.html">导航</a></li>
-				<li><a href="freezy_pic_txt.html">图片相关</a></li>
-				<li><a href="freezy_page.html">分页</a></li>
-				<li><a href="freezy_table.html">表格</a></li>
-				<li><a href="freezy_tab.html">选项卡</a></li>
-				<li><a href="freezy_pop.html">弹出框</a></li>
-				<li><a href="freezy_ser.html">搜索框</a></li>
-				<li><a href="freezy_icon_btn.html">图标和下载按钮</a></li>
-				<li><a href="freezy_rank.html">排行</a></li>
-				<li><a href="freezy_slider.html">轮播（截图向）</a></li>
-				<li><a href="freezy_more.html">'更多'模块</a></li>
-				<li><a href="freezy_login.html">登陆&amp;注册框</a></li>
-			</ul>
-		</div>
+<link rel="import" href="tpl/header.html?__inline">
 		<div class="modules">
 			<h2><a name='m-pic_txt'></a>模块三 图片相关走起</h2>
 			<div class="con">
@@ -66,7 +10,7 @@
 							<li>
 								<div>
 									<a href="" class='icon'>
-										<img src="./img.jpg" >
+										<img src="img.jpg" >
 									</a>
 								</div>
 								<div>
@@ -86,7 +30,7 @@
 									<li>
 										<div>
 											<a href="" class='icon'>
-												<img src="./img.jpg" >
+												<img src="img.jpg" >
 											</a>
 										</div>
 										<div>
@@ -108,7 +52,7 @@
 				<div class='bb1'>
 					<h3>样式二</h3>
 					<div class="m-pic_txt pat2 active">
-						<a href=""><img src="./images/2.jpg" alt=""></a>
+						<a href=""><img src="images/2.jpg" alt=""></a>
 						<div class="con">
 							<p class="tit">我是个标题</p>
 							<p class="con-del">我是内容们</p>
@@ -116,7 +60,7 @@
 
 					</div>
 					<div class="m-pic_txt pat2">
-						<a href=""><img src="./images/2.jpg" alt=""></a>
+						<a href=""><img src="images/2.jpg" alt=""></a>
 						<div class="con">
 							<p class="tit">我是个标题</p>
 							<p class="con-del">我是内容们</p>
@@ -128,7 +72,7 @@
 				<div class="code-html">
 					<pre class="brush: xml;">
 						<div class="m-pic_txt pat2 active">
-							<a href=""><img src="./images/2.jpg" alt=""></a>
+							<a href=""><img src="images/2.jpg" alt=""></a>
 							<div class="con">
 								<p class="tit">我是个标题</p>
 								<p class="con-del">我是内容们</p>
@@ -136,7 +80,7 @@
 
 						</div>
 						<div class="m-pic_txt pat2">
-							<a href=""><img src="./images/2.jpg" alt=""></a>
+							<a href=""><img src="images/2.jpg" alt=""></a>
 							<div class="con">
 								<p class="tit">我是个标题</p>
 								<p class="con-del">我是内容们</p>
@@ -154,10 +98,7 @@
 				</div>
 			</div>
 		</div>	
-	</div>
-	<script src="js/cus.js"></script>
-</body>
-</html>
+<link rel="import" href="tpl/footer.html?__inline">
 <script>
 	var side_navli = document.querySelectorAll('.m-s-nav.cus ul li');
 	addClass(side_navli[2],'active');
