@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Freezy  Free & Lazy</title>
-	<link rel="stylesheet" href="./css/shCore.css"/>
-	<link rel="stylesheet" href="./css/shThemeDefault.css"/>
-	<script src="./js/brush/shCore.js"></script>
-	<script src="./js/brush/brush.js"></script>
-	<script src="./js/brush/shBrushCss.js"></script>
-	<script src="./js/brush/shBrushJScript.js"></script>
-	<script src="./js/brush/shBrushXml.js"></script>
-	<script>SyntaxHighlighter.config.clipboardSwf = 'js/brush/clipboard.swf';
+	<link type="text/css" rel="stylesheet" href="./css/shCore.css">
+<link type="text/css" rel="stylesheet" href="./css/shThemeDefault.css">
+<script type="text/javascript" charset="utf-8" src="./js/brush/shCore.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/brush/brush.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/brush/shBrushCss.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/brush/shBrushJScript.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/brush/shBrushXml.js"></script>
+<script>SyntaxHighlighter.config.clipboardSwf = 'js/brush/clipboard.swf';
 	SyntaxHighlighter.all();</script>
-	<link rel="stylesheet" href="./freezy.css">
-	<link rel="stylesheet" href="./css/cus.css">
-	<script src="./freezy.js"></script>
+	<link type="text/css" rel="stylesheet" href="./freezy.css">
+<link type="text/css" rel="stylesheet" href="./css/cus.css">
+<script type="text/javascript" charset="utf-8" src="./freezy.js"></script>
 </head>
 <body class='freezy'>
 	<div class="fixheader">
@@ -35,6 +35,7 @@
 
 		
 	</div>
+
 	<div class="wrap">
 		<!-- <h1>Freezy文档  我是个正儿八经的文档！</h1> -->
 		<div class="m-s-nav cus">
@@ -62,33 +63,22 @@
 			<p>①引入freezy.js和freezy.css</p>
 			<p>
 				<pre class="brush: xml;">
-					<link rel="stylesheet" href="./freezy.css">
-					<script src="./freezy.js"></script>
-				</pre>
+					<!--RESOURCE_freezy.less_PLACEHOLDER--><!--RESOURCE_freezy.js_PLACEHOLDER--></pre>
 			</p>			
 			<p>
 				②<span>以防class重名，请在body上加上"freezy"的class</span>
 			</p>			
 			<p>③找到需要的模块，复制html和js(原生编写，不用引入js库)</p>			
-			<p class='red'>④若需自定义样式，修改freezy.less文件，每个组件的1到2个关键属性用变量形式定义在了freezy.less文件的起始部分，例如btn的样式：</p>
-			<p>
-				<pre class="brush: css;">
-					//定义关键属性的变量
-					/* u-btn */
-					@u_btn_main:0.8em; //btn的padding-top;
-					//已定义好的变量使用
-					padding: @u_btn_main 2*@u_btn_main;//main值 
-				</pre>
-			</p>
-			<p>⑤关于边框颜色：蓝色边框为html部分；紫色边框为js部分；红色边框为css部分</p>
-			<p>⑥关于less使用，工具http://koala-app.com/index-zh.html。<br>
+			<p>④若需自定义样式，修改freezy.less文件。</p>
+			<p>⑤关于less使用，工具http://koala-app.com/index-zh.html。<br>
 			过程超简单：下载→安装→把css文件夹拖进去→点击所需的less文件→选择“自动编译” “执行编译”。<br>
 			对！ 就是这么简单！引入文件时 把生成的css文件引入即可。教程使劲<a href="koala_course.html" target="_blank">戳我</a>！
+			<p>⑥关于边框颜色：蓝色边框为html部分；紫色边框为js部分；红色边框为css部分</p>
 			</p>
 			<p>⑦关于阿里巴巴矢量图标使用，教程使劲<a href="icon_course.html" target="_blank">戳我</a></p>	
 			<p>⑧项目地址：<a href="https://github.com/trytuorisfy/freezy" target="_blank">https://github.com/trytuorisfy/freezy</a></p>						
 		</div>
 	</div>
-	<script src="./js/cus.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/cus.js"></script>
 </body>
 </html>				

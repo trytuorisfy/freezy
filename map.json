@@ -82,6 +82,10 @@
             "uri": "./freezy.css",
             "type": "css"
         },
+        "freezy备份.less": {
+            "uri": "./freezy备份.css",
+            "type": "css"
+        },
         "js/brush/brush.js": {
             "uri": "./js/brush/brush.js",
             "type": "js"
