@@ -208,7 +208,7 @@ p {
 }
 .freezy .m-pic_txt.pat1 ul li {
   position: relative;
-  padding-left: 110px;
+  padding-left: 110.00000000000001px;
   height: 100px;
   word-wrap: break-word;
   margin-bottom: 10px;
@@ -432,12 +432,12 @@ p {
 .freezy .m-ser {
   position: relative;
   width: 320px;
-  height: 44.8px;
+  height: 44.800000000000004px;
   margin-top: 12px;
 }
 .freezy .m-ser input {
   width: 76%;
-  height: 41.8px;
+  height: 41.800000000000004px;
   border: 0;
   padding-left: 6px;
   line-height: 44px;
@@ -451,12 +451,12 @@ p {
   top: 0;
   right: 0;
   width: 20%;
-  height: 44.8px;
+  height: 44.800000000000004px;
   cursor: pointer;
   text-align: center;
 }
 .freezy .m-ser .m-ser-btn .iconfont {
-  line-height: 44.8px;
+  line-height: 44.800000000000004px;
   font-size: 32px;
 }
 .freezy .m-ser.pat1 {
@@ -470,7 +470,7 @@ p {
   width: 20%;
   font-size: 12px;
   text-align: center;
-  line-height: 43.8px;
+  line-height: 43.800000000000004px;
   position: relative;
   border: 1px solid #54aede;
 }
@@ -713,3 +713,4 @@ p {
 .freezy .m-login.sign .login-input {
   margin-top: 6px;
 }
+/*# sourceMappingURL=freezy.css.map */

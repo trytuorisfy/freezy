@@ -65,6 +65,7 @@ window.onload = function(){
      
 
 	//显示及隐藏导航
+	/*
 	window.onresize = function(){
 		var win_w = document.body.clientWidth;
 		var menu_link = document.querySelector('#menuLink');
@@ -87,7 +88,7 @@ window.onload = function(){
 			}
 		}					
 	}
-
+	*/
 	//module-pic_txt patten2
 	var m_px2 = document.querySelectorAll('.m-pic_txt');
 	toggle_class(m_px2,0);

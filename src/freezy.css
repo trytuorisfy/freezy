@@ -1,24 +1,3 @@
-/* 定义变量开始 */
-/* 主要尺寸去 组件其他尺寸根据此主尺寸按比例计算  若需跳转 请调整比例！！ */
-/* u-btn */
-/* m-h-nav */
-/* m-f-nav.pat1 */
-/* m-f-nav.pat2 */
-/* m-s-nav */
-/* m-pic_txt-pat1 */
-/* m-pic_txt-pat2 */
-/*  */
-/* m-page */
-/* m-table */
-/* m-tab */
-/* m-pop */
-/* m-ser */
-/* m-icon_btn */
-/* m-rank */
-/* m-slider */
-/* m-more */
-/* m-login  login */
-/* 定义变量结束 */
 /* 正文css开始 */
 body {
   margin: 0;
@@ -99,7 +78,7 @@ p {
 }
 .freezy .u-btn:hover,
 .freezy .u-btn:focus {
-  background: #0069a6;
+  background: #0069A6;
 }
 .freezy .m-h-nav ul li {
   float: left;
@@ -120,7 +99,7 @@ p {
 }
 .freezy .m-h-nav ul li a:hover {
   color: #fff;
-  background: #0069a6;
+  background: #0069A6;
 }
 .freezy .m-f-nav {
   font-size: 12px;
@@ -351,7 +330,7 @@ p {
   border-bottom: 0;
   text-align: center;
   font-size: 14px;
-  color: #0069a6;
+  color: #0069A6;
   text-decoration: none;
   border-right: 1px solid #cbcbcb;
   border-bottom: 1px solid #cbcbcb;
@@ -432,12 +411,12 @@ p {
 .freezy .m-ser {
   position: relative;
   width: 320px;
-  height: 44.8px;
+  height: 44px;
   margin-top: 12px;
 }
 .freezy .m-ser input {
   width: 76%;
-  height: 41.8px;
+  height: 40px;
   border: 0;
   padding-left: 6px;
   line-height: 44px;
@@ -451,12 +430,12 @@ p {
   top: 0;
   right: 0;
   width: 20%;
-  height: 44.8px;
+  height: 44px;
   cursor: pointer;
   text-align: center;
 }
 .freezy .m-ser .m-ser-btn .iconfont {
-  line-height: 44.8px;
+  line-height: 44px;
   font-size: 32px;
 }
 .freezy .m-ser.pat1 {
@@ -470,7 +449,7 @@ p {
   width: 20%;
   font-size: 12px;
   text-align: center;
-  line-height: 43.8px;
+  line-height: 42px;
   position: relative;
   border: 1px solid #54aede;
 }
@@ -588,7 +567,7 @@ p {
   display: inline-block;
 }
 .freezy .m-rank li.active .r a {
-  width: 134.4px;
+  width: 134px;
   padding-top: 0;
 }
 .freezy .m-rank li.active .r p {
@@ -713,3 +692,4 @@ p {
 .freezy .m-login.sign .login-input {
   margin-top: 6px;
 }
+/*# sourceMappingURL=freezy.css.map */
