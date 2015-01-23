@@ -54,7 +54,7 @@ function toggle_class(obj,state){ //state = 0,mouseout时将本身active也去�
 				if(state == 0){
 					for(j=0;j<obj.length;j++){
 						if(j==i){
-							remove_active(obj[j]);
+							removeClass(obj[j],'active');
 						}
 					}								
 				}

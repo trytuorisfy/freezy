@@ -5,8 +5,8 @@
             "type": "css"
         },
         "css/cus.less": {
-            "uri": "./css/cus.css",
-            "type": "css"
+            "uri": "./css/cus.less",
+            "type": "less"
         },
         "css/shCore.css": {
             "uri": "./css/shCore.css",
@@ -25,8 +25,8 @@
             "type": "css"
         },
         "demos/css/demo.less": {
-            "uri": "./demos/css/demo.css",
-            "type": "css"
+            "uri": "./demos/css/demo.less",
+            "type": "less"
         },
         "demos/css/style.css": {
             "uri": "./demos/css/style.css",
@@ -44,8 +44,8 @@
             ]
         },
         "demos/freezy.less": {
-            "uri": "./demos/freezy.css",
-            "type": "css"
+            "uri": "./demos/freezy.less",
+            "type": "less"
         },
         "demos/js/banner.js": {
             "uri": "./demos/js/banner.js",
@@ -66,25 +66,6 @@
         "demos/search.js": {
             "uri": "./demos/search.js",
             "type": "js"
-        },
-        "freezy.css": {
-            "uri": "./freezy.css",
-            "type": "css"
-        },
-        "freezy.js": {
-            "uri": "./freezy.js",
-            "type": "js",
-            "deps": [
-                "freezy.css"
-            ]
-        },
-        "freezy.less": {
-            "uri": "./freezy.css",
-            "type": "css"
-        },
-        "freezy备份.less": {
-            "uri": "./freezy备份.css",
-            "type": "css"
         },
         "js/brush/brush.js": {
             "uri": "./js/brush/brush.js",
@@ -109,6 +90,21 @@
         "js/cus.js": {
             "uri": "./js/cus.js",
             "type": "js"
+        },
+        "src/freezy.css": {
+            "uri": "./src/freezy.css",
+            "type": "css"
+        },
+        "src/freezy.js": {
+            "uri": "./src/freezy.js",
+            "type": "js",
+            "deps": [
+                "src/freezy.css"
+            ]
+        },
+        "src/freezy.less": {
+            "uri": "./src/freezy.less",
+            "type": "less"
         }
     },
     "pkg": {}
