@@ -1,10 +1,7 @@
-freezy
+Freezy
 ======
 
 Free &amp; Lazy 前端简易框架
-使用教程:http://trytuorisfy.github.io/freezy/
+使用教程:[看这里！](http://trytuorisfy.github.io/freezy/)
 
-freezy.css和freezy.js在 src文件夹中
-
-关于分支，fis-freezy为原版代码，因为这些页面是通过fis生成的~
-如果会用fis的话，下这个版本，方便。
+就是这么的简单粗暴，直接上js和css（当然css就是less生成的二选一呗）
