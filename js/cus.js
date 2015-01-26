@@ -1,7 +1,7 @@
 window.onload = function(){
 	//弹出框js开始
 	var pop_cancel = document.querySelector('#m-pop-cancel');
-	
+	var pop_ok = document.querySelector('#m-pop-ok');
 		if(pop_cancel != null){
 			var m_pop = document.querySelector('#m-pop');
 			var pop_close = document.querySelector('#pop-close');
@@ -10,6 +10,9 @@ window.onload = function(){
 			pop_cancel.onclick = function(){
 				m_pop.style.display = 'none';
 			}
+			pop_ok.onclick = function(){
+				m_pop.style.display = 'none';
+			}						
 			pop_close.onclick = function(){
 				m_pop.style.display = 'none';
 			}

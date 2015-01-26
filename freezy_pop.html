@@ -57,6 +57,7 @@
 		</div>
 		<div class="modules">
 			<h2><a name='m-pop'></a>模块七 弹出框 </h2>
+			<h4 class='t-ad'><a href="http://jsfiddle.net/tuorisfy/v8dv9799/1/" target="_blank">测试地址，看这里！</a></h4>
 			<a class='u-btn' id='pop-show'>点击我出弹框</a>
 			<div class="con">
 				<div class="m-pop" id='m-pop'>
@@ -68,13 +69,14 @@
 					        <p>内容区：我是内容区 yoyoyo</p>
 					    </div>
 					    <div class="btns">
-				            <button class="u-btn ok">确定</button>
+				            <button class="u-btn ok" id='m-pop-ok'>确定</button>
 				            <a class="u-btn cancel" id='m-pop-cancel'>取消</a>
 					    </div>
 				    </div>
 				</div>
 				<div class="code-html">
 					<pre class="brush: xml;">
+						<a class="u-btn" id="pop-show">点击我出弹框</a>
 						<div class="m-pop" id='m-pop'>
 							<div class="shadow">
 							</div>
@@ -84,7 +86,7 @@
 							        <p>内容区：我是内容区 yoyoyo</p>
 							    </div>
 							    <div class="btns">
-						            <button class="u-btn ok">确定</button>
+						            <button class="u-btn ok" id='m-pop-ok'>确定</button>
 						            <a class="u-btn cancel" id='m-pop-cancel'>取消</a>
 							    </div>
 						    </div>
@@ -94,6 +96,7 @@
 				<div class="code-js">
 					<pre class="brush: js;">
 						var pop_cancel = document.querySelector('#m-pop-cancel');
+						var pop_ok = document.querySelector('#m-pop-ok');
 						var m_pop = document.querySelector('#m-pop');
 						var pop_close = document.querySelector('#pop-close');
 						var pop_show = document.querySelector('#pop-show');
@@ -101,6 +104,9 @@
 						pop_cancel.onclick = function(){
 							m_pop.style.display = 'none';
 						}
+						pop_ok.onclick = function(){
+							m_pop.style.display = 'none';
+						}						
 						pop_close.onclick = function(){
 							m_pop.style.display = 'none';
 						}
